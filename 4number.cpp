@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace sdt;
+using namespace std;
 
 double findElementEqualToAverage(int arr[], int size) {
     if (size == 0) {
