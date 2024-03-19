@@ -11,17 +11,17 @@ int main() {
 
     // Завдання 2
     *ptr = 20;
-    cout << "Нове значення змінної number: " << number << endl;
+    cout << "Нове значення number: " << number << endl;
 
     // Завдання 3
     ptr++;
-    cout << "Значення, на яке вказує ptr після збільшення: " << *ptr << endl;
-    cout << "Після збільшення ptr вказує на нову адресу, не на number." << endl;
+    cout << "Значення ptr: " << *ptr << endl;
+    cout << "Після збільшення ptr" << endl;
 
     // Завдання 4
     int arr[5] = {1, 2, 3, 4, 5};
     int *arrPtr = arr;
-    cout << "Значення елементів масиву arr:" << endl;
+    cout << "arr: " << endl;
     for (int i = 0; i < 5; i++) {
         cout << *arrPtr << " ";
         arrPtr++;
@@ -32,8 +32,8 @@ int main() {
     int var = 100;
     int *ptrToVar = &var;
     int **doublePtr = &ptrToVar;
-    cout << "Значення змінної var через подвійний вказівник: " << **doublePtr << endl;
-    cout << "Адреса подвійного вказівника doublePtr: " << doublePtr << endl;
+    cout << "Значення var через подвійний вказівник: " << **doublePtr << endl;
+    cout << "Адреса doublePtr: " << doublePtr << endl;
 
     return 0;
 }
