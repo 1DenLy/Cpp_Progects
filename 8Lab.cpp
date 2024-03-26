@@ -30,7 +30,7 @@ int main() {
     cout << "Введіть символ для пошуку: ";
 
     cin >> target;
-    size_t index = str.find(target);
+    int index = str.find(target);
 
     if (index != string::npos) {
         cout << "Індекс першого входження символу '" << target << "': " << index << endl;
@@ -66,7 +66,7 @@ int main() {
     
     cout << "Введіть символ для видалення: ";
     cin >> toRemove;
-    size_t pos;
+    int pos;
     while ((pos = combined.find(toRemove)) != string::npos) {
         combined.erase(pos, 1);
     }
