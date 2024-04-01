@@ -63,15 +63,18 @@ int main() {
 // Завдання 6: Видалити з рядка всі входження символу
   
     char toRemove;
-    
     cout << "Введіть символ для видалення: ";
     cin >> toRemove;
-    int pos;
-    while ((pos = combined.find(toRemove)) != string::npos) {
-        combined.erase(pos, 1);
-    }
-    cout << "Рядок після видалення символу: " << combined << endl;
 
+    string result;
+    for (char c : combined) {
+        if (c != toRemove) {
+            result += c;
+        }
+    }
+    
+    cout << "Рядок після видалення символу: " << result << endl;
+    
     return 0;
 }
 
