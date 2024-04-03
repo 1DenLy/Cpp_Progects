@@ -2,41 +2,49 @@
 #include <cstdlib>
 #include <ctime> 
 
+using namespace std;
+
 void printNumbersInRange(){
     int firstNum = 1, secondNum = 4, thirdNum = 8;
-    std::cout << firstNum << " " << secondNum << " " << thirdNum << std::endl;
+    cout << firstNum << " " << secondNum << " " << thirdNum << endl;
 
     int rangeLimit = 5;
-    if(1 <= firstNum && firstNum <= rangeLimit) std::cout << firstNum << " ";
-    if(1 <= secondNum && secondNum <= rangeLimit) std::cout << secondNum << " ";
-    if(1 <= thirdNum && thirdNum <= rangeLimit) std::cout << thirdNum << " ";
+    if(1 <= firstNum && firstNum <= rangeLimit)
+        cout << firstNum << " ";
+    if(1 <= secondNum && secondNum <= rangeLimit)
+        cout << secondNum << " ";
+    if(1 <= thirdNum && thirdNum <= rangeLimit)
+        cout << thirdNum << " ";
 
-    std::cout << std::endl;
+    cout << endl;
 }
 
 void findLargest(){
     int firstNum = 2, secondNum = 3, thirdNum = 5;
-    std::cout << firstNum << " " << secondNum << " " << thirdNum << std::endl;
+    cout << firstNum << " " << secondNum << " " << thirdNum << endl;
 
-    if(firstNum > secondNum && firstNum > thirdNum) std::cout << firstNum << std::endl;
-    if(secondNum > firstNum && secondNum > thirdNum) std::cout << secondNum << std::endl;
-    if(thirdNum > firstNum && thirdNum > secondNum) std::cout << thirdNum << std::endl;
+    if(firstNum > secondNum && firstNum > thirdNum)
+        cout << firstNum << endl;
+    if(secondNum > firstNum && secondNum > thirdNum)
+        cout << secondNum << endl;
+    if(thirdNum > firstNum && thirdNum > secondNum)
+        cout << thirdNum << endl;
 }
 
 void printSequenceAndSum(){
     int num;
-    std::cout << "Введіть число: ";
-    std::cin >> num;
+    cout << "Введіть число: ";
+    cin >> num;
 
     double firstNum = 1;
     double sum = 0;
     for(int i = 0; i < num; i++)
     {
-        std::cout << firstNum << " ";
+        cout << firstNum << " ";
         sum += firstNum;
         firstNum /= -2;
     }
-    std::cout << std::endl << "Сума: " << sum << std::endl;
+    cout << endl << "Сума: " << sum << endl;
 }
 
 void findSmallestFactor(){
@@ -47,7 +55,7 @@ void findSmallestFactor(){
     {
         factor++;
     }
-    std::cout << factor << std::endl;
+    cout << factor << endl;
 }
 
 void fibonacciSequence(){
@@ -63,9 +71,9 @@ void fibonacciSequence(){
             firstNum = secondNum;
             secondNum = nextNum;
         }
-        std::cout << nextNum << " ";
+        cout << nextNum << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 }
 
 void guessNumber(){
@@ -74,69 +82,45 @@ void guessNumber(){
     for(int attempt = 1; true; attempt++)
     {
         int guessedNumber;
-        std::cout << "Вгадайте число: ";
-        std::cin >> guessedNumber;
+        cout << "Вгадайте число: ";
+        cin >> guessedNumber;
 
         if(guessedNumber <= 0 || guessedNumber >= 21)
         {
-            std::cout << "Невірне введення!" << std::endl;
+            cout << "Невірне введення!" << endl;
             attempt--;
             continue;
         }
         if(guessedNumber == randomNumber)
         {
-            std::cout << "Вірно!" << std::endl << "Ви вгадали число за " << attempt << " спроб" << (attempt > 1 ? "и" : "") << "!";
+            cout << "Вірно!" << endl << "Ви вгадали число за " << attempt << " спроб" << (attempt > 1 ? "и" : "") << "!";
             break;
         }
         else
         {
-            std::cout << "Неправильно!";
+            cout << "Неправильно!";
             if(guessedNumber > randomNumber)
-            {
-                std::cout << std::endl << " Спробуйте менше число!" << std::endl;
-            }
+                cout << endl << " Спробуйте менше число!" << endl;
             else
-            {
-                std::cout << std::endl << " Спробуйте більше число!" << std::endl;
-            }
+                cout << endl << " Спробуйте більше число!" << endl;
         }
     }
 }
 
 int main()
 {
-    std::cout << std::endl << "Завдання 1" << std::endl << "----------" << std::endl;
+    cout << endl << "Завдання 1" << endl << "----------" << endl;
     printNumbersInRange();
-    std::cout << std::endl << "Завдання 2" << std::endl << "----------" << std::endl;
+    cout << endl << "Завдання 2" << endl << "----------" << endl;
     findLargest();
-    std::cout << std::endl << "Завдання 3" << std::endl << "----------" << std::endl;
+    cout << endl << "Завдання 3" << endl << "----------" << endl;
     printSequenceAndSum();
-    std::cout << std::endl << "Завдання 4" << std::endl << "----------" << std::endl;
+    cout << endl << "Завдання 4" << endl << "----------" << endl;
     findSmallestFactor();
-    std::cout << std::endl << "Завдання 5" << std::endl << "----------" << std::endl;
+    cout << endl << "Завдання 5" << endl << "----------" << endl;
     fibonacciSequence();
-    std::cout << std::endl << "Завдання 6" << std::endl << "----------" << std::endl;
+    cout << endl << "Завдання 6" << endl << "----------" << endl;
     guessNumber();
-    std::cout << std::endl;
+    cout << endl;
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
