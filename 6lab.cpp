@@ -64,21 +64,15 @@ int productOfColumnWithMaxElement(int** matrix, int size) {
 
 int main() {
 
-  
-    // Приклад використання функцій
     int a = 10, b = 5;
     modifyValues(&a, &b);
     cout << "a = " << a << ", b = " << b << endl;
 
-
-  
     int x[] = {1, 2, 3, 4, 5};
     int y[] = {6, 5, 4, 3, 2};
     int occurrences = countOccurrences(x, 5, y, 5);
-    cout << "Кількість входжень другого елементу масиву x у масив y: " << occurrences << endl;
+    cout << "Кількість входжень елементу x у масив y: " << occurrences << endl;
 
-
-  
     int bArray[] = {0, 10, 15, 20, 25};
     int CArray[5];
     int sizeC;
@@ -90,7 +84,6 @@ int main() {
     cout << endl;
 
 
-  
     int n = 3;
     int** matrix = new int*[n];
     for (int i = 0; i < n; i++) {
@@ -109,8 +102,6 @@ int main() {
     cout << "Добуток елементів стовпчика, де розташований максимальний елемент: " << product << endl;
 
 
-  
-    // Звільнення пам'яті, виділеної для матриці
     for (int i = 0; i < n; i++) {
         delete[] matrix[i];
     }
