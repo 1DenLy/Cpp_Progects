@@ -26,7 +26,7 @@ int countOccurrences(int* xArr, int sizeX, int* yArr, int sizeY) {
 
 
 // Функція для переписування ненульових елементів масиву 'b', які діляться на 5, в масив 'C'
-void copyNonZeroDivisibleByFive(int* bArr, int sizeB, int* cArr, int& sizeC) {
+void copyNonZero(int* bArr, int sizeB, int* cArr, int& sizeC) {
     sizeC = 0;  
     for (int i = 0; i < sizeB; i++) {
         if (bArr[i] != 0 && bArr[i] % 5 == 0) {
@@ -74,7 +74,7 @@ int main() {
     int bArray[] = {0, 10, 15, 20, 25};
     int CArray[5];
     int sizeC;
-    copyNonZeroDivisibleByFive(bArray, 5, CArray, sizeC);
+    copyNonZero(bArray, 5, CArray, sizeC);
     cout << "Ненульові елементи, які діляться на 5, у масиві b: ";
     for (int i = 0; i < sizeC; i++) {
         cout << CArray[i] << " ";
